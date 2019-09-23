@@ -4,3 +4,5 @@ libvirt_packages:
   - qemu-kvm
   - libvirt-bin
   - bridge-utils
+
+libvirt_service: libvirtd

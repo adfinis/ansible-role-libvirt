@@ -35,5 +35,3 @@ libvirt_on_shutdown_parallel: 2
 # request). The default value is 300 seconds (5 minutes).
 libvirt_on_shutdown_timeout: 300
 
-
-libvirt_service: libvirtd

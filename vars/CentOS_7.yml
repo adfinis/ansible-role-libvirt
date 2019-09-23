@@ -2,3 +2,5 @@
 
 libvirt_packages:
   - libvirt-daemon-kvm
+
+libvirt_service: libvirtd
