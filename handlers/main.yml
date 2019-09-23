@@ -1,6 +1,6 @@
 ---
+
 - name: 'libvirtd restart'
   service:
     name: '{{ libvirt_service }}'
     state: restarted
-
