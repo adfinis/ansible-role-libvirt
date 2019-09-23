@@ -35,3 +35,6 @@ libvirt_on_shutdown_parallel: 2
 # request). The default value is 300 seconds (5 minutes).
 libvirt_on_shutdown_timeout: 300
 
+# Allow managing LVM logical volumes with libvirt (for VM storage)?
+# Will result in the installation of additional packages on some systems.
+libvirt_use_lvm_storage: false

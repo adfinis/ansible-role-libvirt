@@ -5,4 +5,6 @@ libvirt_packages:
   - libvirt-bin
   - bridge-utils
 
+libvirt_packages_lvm_backend: []
+
 libvirt_service: libvirtd
