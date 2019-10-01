@@ -1,0 +1,9 @@
+---
+
+libvirt_packages:
+  - libvirt-daemon-kvm
+
+libvirt_packages_lvm_backend:
+  - libvirt-daemon-driver-storage-logical
+
+libvirt_service: libvirtd

@@ -5,3 +5,14 @@
     name: '{{ libvirt_packages }}'
     state: present
 
+- name: install additional libvirt packages for logical volume management
+  package:
+    name: '{{ libvirt_packages_lvm_backend }}'
+    state: present
+  when: libvirt_use_lvm_storage
+  # This may show a deprecation warning about bare variables on some versions of
+  # Ansible.
+  # It is a bug that was introduced in Ansible 2.8, and fixed in Ansible 2.8.2.
+  # Bug report:  https://github.com/ansible/ansible/issues/53428
+  # Bugfix MR:   https://github.com/ansible/ansible/pull/57190
+  # Backport MR: https://github.com/ansible/ansible/pull/57329
