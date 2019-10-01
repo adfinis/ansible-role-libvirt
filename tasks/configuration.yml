@@ -1,0 +1,24 @@
+---
+
+- name: create libvirt guest configuration
+  template:
+    src: etc/default/libvirt-guests.j2
+    dest: '/etc/default/libvirt-guests'
+    owner: root
+    group: root
+    mode: 0644
+  tags:
+    - 'role::libvirt'
+    - 'role::libvirt:config'
+  notify:
+    - 'libvirtd restart'
+
+- name: enable and start libvirt service
+  service:
+    name: '{{ libvirt_service }}'
+    state: started
+    enabled: yes
+  tags:
+    - 'role::libvirt'
+    - 'role::libvirt:install'
+    - 'role::libvirt:config'

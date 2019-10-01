@@ -1,0 +1,10 @@
+---
+
+libvirt_packages:
+  - qemu-kvm
+  - libvirt-bin
+  - bridge-utils
+
+libvirt_packages_lvm_backend: []
+
+libvirt_service: libvirtd
