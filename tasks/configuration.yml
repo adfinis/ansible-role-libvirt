@@ -7,9 +7,6 @@
     owner: root
     group: root
     mode: 0644
-  tags:
-    - 'role::libvirt'
-    - 'role::libvirt:config'
   notify:
     - 'libvirtd restart'
 
@@ -18,7 +15,3 @@
     name: '{{ libvirt_service }}'
     state: started
     enabled: yes
-  tags:
-    - 'role::libvirt'
-    - 'role::libvirt:install'
-    - 'role::libvirt:config'
