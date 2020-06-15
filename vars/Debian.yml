@@ -2,7 +2,8 @@
 
 libvirt_packages:
   - qemu-kvm
-  - libvirt-bin
+  - libvirt-clients
+  - libvirt-daemon-system
   - bridge-utils
 
 libvirt_packages_lvm_backend: []
